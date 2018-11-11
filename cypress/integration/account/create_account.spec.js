@@ -29,7 +29,7 @@ describe('Account Creation Failure Paths', function() {
         expect(cy.contains(account_create_messages.SELECT_YOUR_BIRTHDAY)).to.exist;
     });
 
-    it.only('No Name', function() {
+    it('No Name', function() {
         cy.get(account_create_elements.LAST_NAME).type("Last");
         cy.get(account_create_elements.EMAIL_MOBILE).type("fake@email.com");
         cy.get(account_create_elements.EMAIL_MOBILE_CONFIRMATION).type("fake@email.com");
